@@ -1,0 +1,94 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px ;
+}
+body{
+    /*min-height: 100vh;*/
+    display: grid;
+    background-image: url(../img/pokemon-img.png);
+    background-repeat: repeat;
+    background-size: 100px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 100%;
+    position: relative;
+  
+}
+h1 {
+    font-weight: bold;
+    font-size: 32px;
+    color: red;
+
+}
+/*stayl the button*/
+.button1{
+    width: 80%;
+    border-radius: 3% ;
+    margin: 5px 10px 1px 10px;
+    background-color: #FFE4B5;
+    position: relative;
+    
+}
+.pokemon-list {
+    align-items: center;
+    width: 100%;
+    border: 3px solid black;
+    margin-bottom: 5px;
+}
+.pokemon-list li {
+    width: auto;
+    list-style-type: none;
+}
+.button1:focus{
+    color: red;
+}
+.button1:hover{
+    color:  #FF6347;
+   width: 90%;
+}
+.button1:active{
+    color: black;
+}
+.background-img{
+  / width: 50%;
+    text-align:center;
+    left:25%;
+    font-size: 30px;*/
+}
+
+/* Modal_Style */
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+
+  display: block;
+}
+.modal{
+  box-sizing: border-box;
+display: inline-block;
+  background-color: white;
+}
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+}
+
+.modal h4 {
+  margin-top: 0;
+}
+
+.modal h5 {
+  margin-bottom: 0;
+}
+
+*/
