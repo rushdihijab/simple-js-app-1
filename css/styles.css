@@ -6,7 +6,6 @@
 }
 body{
     /*min-height: 100vh;*/
-    display: grid;
     background-image: url(../img/pokemon-img.png);
     background-repeat: repeat;
     background-size: 100px;
@@ -25,22 +24,28 @@ h1 {
 }
 /*stayl the button*/
 .button1{
-    width: 80%;
+    width: 95%;
     border-radius: 3% ;
     margin: 5px 10px 1px 10px;
     background-color: #FFE4B5;
     position: relative;
+    font-size: 32px;
     
 }
 .pokemon-list {
+    position: relative;
+    left: 30%;
     align-items: center;
-    width: 100%;
+    width: 40%;
     border: 3px solid black;
     margin-bottom: 5px;
 }
 .pokemon-list li {
+      
     width: auto;
     list-style-type: none;
+    position: relative;
+    
 }
 .button1:focus{
     color: red;
@@ -53,42 +58,59 @@ h1 {
     color: black;
 }
 .background-img{
-  / width: 50%;
+    width: 50%;
     text-align:center;
-    left:25%;
-    font-size: 30px;*/
+
+    font-size: 30px;
 }
 
 /* Modal_Style */
 
 #modal-container {
-  display: none;
+      top: 0;
+      left: 0;
+      width: 10%;
+      height: 10%;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      display: none;
+}
+
+#modal-container {
+display: none;
 }
 
 #modal-container.is-visible {
-
-  display: block;
+display: block;
 }
 .modal{
-  box-sizing: border-box;
-display: inline-block;
-  background-color: white;
-}
-.modal-close {
-  float: right;
-  -webkit-appearance: none;
-  border: 0;
-  background: none;
-  color: #777;
-  text-decoration: underline;
-}
-
-.modal h4 {
-  margin-top: 0;
+    position:fixed;
+    top: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 15px;
+    width: 30%;
+    height: 60%;
+    text-align: center;
+    border: 3px solid black;
 }
 
-.modal h5 {
-  margin-bottom: 0;
+.modal-close{
+    float: right;
+    /*-webkit-appearance: none;*/
+    border: 0;
+    background: none;
+    text-decoration: underline;
+    color: black;
 }
 
-*/
+.modal h4{
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.modal h5{
+    margin-bottom: 0;
+    font-size: 20px;
+}
