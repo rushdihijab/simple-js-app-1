@@ -1,4 +1,5 @@
 // IIFE function;
+
 let pokemonRepository = (function() {
 			let repository = [];
 	// The variable apiUrl holds the API link to the pokemon list.
@@ -54,7 +55,7 @@ let pokemonRepository = (function() {
 					return response.json();
 				}).then(function(details) {
 					// Now we add the details to the item//
-					item.imageUrl = details.sprites.front_default;
+					item.imageUrl =     details.sprites.front_default;
 					item.height = details.height;
 					item.types = details.types;
 					item.weight = details.weight
@@ -86,10 +87,10 @@ let pokemonRepository = (function() {
 				titleElement.innerText = 'Name : ' + pokemon.name;
 				let contentElement = document.createElement('h5');
 				contentElement.innerText = 'Height : ' + pokemon.height;
-				let typesElement = document.createElement('h3');
-				typesElement.innerText = pokemon.types;
 				let weightElement = document.createElement('h2');
 				weightElement.innerText = 'Weight : '+pokemon.weight;
+				let typesElement = document.createElement('h3');
+				//typesElement.innerText = pokemon.types.map(t => 't.types');
 
 				//add img to the modal//
 				let pokemonImage = document.createElement('img');
@@ -99,26 +100,30 @@ let pokemonRepository = (function() {
 				modal.appendChild(closeButtonElement);
 				modal.appendChild(titleElement);
 				modal.appendChild(contentElement);
-				modal.appendChild(typesElement);
-				modal.appendChild(weightElement)
+				modal.appendChild(weightElement);
+				//modal.appendChild(typesElement);
 				modalContainer.appendChild(modal);
 				modalContainer.classList.add('is-visible');
+
+				}
 
 				function hideModal() {
 					let modalContainer = document.querySelector('#modal-container');
 					modalContainer.classList.remove('is-visible');
-}
-					modalContainer.addEventListener('click', (e) => {
+				}
+
+				let modalContainer = document.querySelector('#modal-container')
+				modalContainer.addEventListener('click', (e) => {
 						let target = e.target;
 						if (target === modalContainer) {
 							hideModal();
 						}
 					});
-				}
-					// Function to close the modal via the Esc keyboard key//
 
+
+					// Function to close the modal via the Esc keyboard key//
 					window.addEventListener('keydown', (e) => {
-						let modalContainer = document.querySelector('modal-container');
+						let modalContainer = document.querySelector('#modal-container');
 						if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
 							hideModal();
 						}
