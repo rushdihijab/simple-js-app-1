@@ -14,7 +14,7 @@ body{
     font-size: 16px;
     margin: 100%;
     position: relative;
-  
+
 }
 h1 {
     font-weight: bold;
@@ -30,7 +30,7 @@ h1 {
     background-color: #FFE4B5;
     position: relative;
     font-size: 26px;
-    
+
 }
 .pokemon-list {
     position: relative;
@@ -41,20 +41,20 @@ h1 {
     margin-bottom: 5px;
 }
 .pokemon-list li {
-      
+
     width: auto;
     list-style-type: none;
     position: relative;
-    
+
 }
 .button1:focus{
     color: red;
 }
 .button1:hover{
     color:  #FF6347;
-    font-size: 28px; 
+    font-size: 28px;
     box-shadow: 2px 1px black;
-    
+
 }
 .button1:active{
     color: black;
@@ -67,7 +67,7 @@ h1 {
 }
 
 /* Modal_Style */
-
+/*content to the modal*/
 #modal-container {
       top: 0;
       left: 0;
@@ -77,30 +77,29 @@ h1 {
       z-index: 999;
       display: none;
 }
-
+/*hide Modal*/
 #modal-container {
 display: none;
 }
-
+/*visible Modal*/
 #modal-container.is-visible {
 display: block;
 }
+
 .modal{
     position:fixed;
-    left: 35%;
+    left: 25%;
     top: 130px;
     display: inline-block;
     box-sizing: border-box;
     background: #fff;
     padding: 15px;
-    width: 30%;
+    width: 50%;
     text-align: center;
     border: 3px solid black;
-  
-    
-  
-}
 
+}
+/* close Button */
 .modal-close{
     float: right;
     -webkit-appearance: none;
@@ -110,24 +109,24 @@ display: block;
     border: 3px solid black;
     font-size: 32px
 }
-
+/*the title, Modal */
 .modal h4{
     margin-top: 0;
     font-size: 24px;
 }
-
+/*the text, pokemon name in the Modal*/
 .modal h5{
     margin-bottom: 0;
     font-size: 20px;
 }
-
+/*the types pokemon in the Modal*/
 .modal h3{
   margin-bottom: 2px;
   font-size: 20px;
 }
-
+/*the weight pokemon in the Modal*/
 .modal h2 {
   margin-bottom: 2px;
   font-size: 20px;
-  
+
 }
