@@ -13,7 +13,7 @@
 		}
 		//pokemon list + li + button show the details//
 		function addListItem(pokemon) {
-			let pokemonList = document.querySelector(".pokemon-list");
+			let pokemonList = document.querySelector("#pokemon-list");
 			let listpokemon = document.createElement("li");
 			let button = document.createElement("button");
 			button.innerText = pokemon.name;
@@ -87,8 +87,7 @@
 			contentElement.innerText = 'Height : ' + pokemon.height;
 			let weightElement = document.createElement('h2');
 			weightElement.innerText = 'Weight : '+pokemon.weight;
-			let typesElement = document.createElement('h3');
-			typesElement.innerText = JSON.stringify(pokemon.types);
+
 
 			//add img to the modal//
 			let pokemonImage = document.createElement('img');
@@ -99,7 +98,6 @@
 			modal.appendChild(titleElement);
 			modal.appendChild(contentElement);
 			modal.appendChild(weightElement);
-			modal.appendChild(typesElement);
 			modalContainer.appendChild(modal);
 			modalContainer.classList.add('is-visible');
 
