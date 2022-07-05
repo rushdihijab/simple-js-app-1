@@ -10,11 +10,10 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/styles.css">
-      <link rel="stylesheet" type="text/css" href="css/normalize.css">
    </head>
    <body>
       <!--Navigation -->
-      <nav class="navbar fixed-top navbar-light" style="background-color: #f08080;">
+      <div class="navbar fixed-top navbar-light" id=nav style="background-color: #f08080;">
          <a class="navbar-brand" href="#">Pokemon</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -30,8 +29,8 @@
                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
             </form>
          </div>
-      </nav>
-      <main class="container-fluid">
+      </div>
+      <div class="container-fluid">
          <div class="row">
             <div class="col col-xs-2" id="pokemon-list" ></div>
          </div>
@@ -57,7 +56,7 @@
             </div>
          </div>
          <div>
-      </main>
+      </div>
       <div class="background-img"> </div>
       <!--Bootstrap JS start -->
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -69,10 +68,10 @@
          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
          crossorigin="anonymous"></script>
       <!--js script for promise polyfille-->
-      <script src="js/promise-polyfill.js"></script>
+      <script src="src/js/promise-polyfill.js"></script>
       <!--js script for fetch polyfill-->
-      <script src="js/fetch.umd.js"></script>
+      <script src="src/js/fetch.umd.js"></script>
       <!-- js -->
-      <script src="js/scripts.js"></script>
+      <script src="dist/scripts.js"></script>
    </body>
 </html>

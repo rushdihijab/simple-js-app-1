@@ -1,6 +1,4 @@
 // IIFE function;
-
-
 let pokemonRepository = (function() {
 	let repository = [];
 	let pokemon =[];
@@ -16,7 +14,7 @@ let pokemonRepository = (function() {
 	function getAll() {
 		return repository;
 	}
-//search bar filter need to be edit//
+
 	function filterList() {
     let inputValue = $("input").val();
     let list = $("li");
