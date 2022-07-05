@@ -1,8 +1,11 @@
 // IIFE function;
 let pokemonRepository = (function() {
 	let repository = [];
+	let pokemon =[];
 	// The variable apiUrl holds the API link to the pokemon list.
 	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+	let input = $("input");
+  input.on("input", filterList);
 
 	function add(pokemon) {
 		repository.push(pokemon);
@@ -11,6 +14,20 @@ let pokemonRepository = (function() {
 	function getAll() {
 		return repository;
 	}
+
+	function filterList() {
+    let inputValue = $("input").val();
+    let list = $("li");
+    list.each(function() {
+      let item = $(this);
+      let name = item.text();
+      if (name.startsWith(inputValue)) {
+        item.show();
+      } else {
+        item.hide();
+      }
+    });
+  }
 	//pokemon list + li + button show the details//
 	function addListItem(pokemon) {
 		let pokemonList = document.querySelector("#pokemon-list");
@@ -93,25 +110,19 @@ let pokemonRepository = (function() {
 		$('#exampleModalLive').modal();
 
 	}
-// the search functin ??? //
-	function myFunction() {
-	    var input, filter, ul, li, a, i, txtValue;
-	    input = document.getElementById("form-control mr-sm-2");
-	    filter = input.value.toUpperCase();
-	    ul = document.getElementById("#pokemon-list");
-	    li = ul.getElementsByTagName("li");
-	    for (i = 0; i < li.length; i++) {
-	        a = li[i].getElementsByTagName("a")[0];
-	        txtValue = a.textContent || a.innerText;
-	        if (txtValue.indexOf(filter) > -1) {
-	            li[i].style.display = "";
-	        } else {
-	            li[i].style.display = "none";
-	        }
-	    }
-	}
 
-
+	// the search functin ??? //
+	// let navbar =document.querySelector('#navbarSupportedContent');
+	// let inputForSearch =document.querySelector('input')
+	// inputForSearch.addEventListener('keyup', (e) => {
+	// 	let seachBar = e.target.value;
+	// 	let filter = loadList.filter((pokemon) => {
+	// 		return (
+	// 			pokemon.name.include(seachBar)
+	// 		);
+	// 	});
+	// 	console.log(filter);
+	// });
 
 	return {
 		add: add,
@@ -124,6 +135,11 @@ let pokemonRepository = (function() {
 
 	}
 })();
+
+
+
+
+
 // First loadList of pokemon from API
 // Then execute to get all pokemons as required
 // And execute for Each pokemon an new list if required
